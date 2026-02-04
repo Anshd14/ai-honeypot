@@ -1,0 +1,9 @@
+fastapi
+uvicorn
+jinja2
+transformers
+scikit-learn
+pandas
+requests
+psycopg2-binary
+
