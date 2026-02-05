@@ -1,22 +1,28 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>AI Honeypot Result</title>
+    <meta charset="UTF-8">
+    <title>Honeypot Result</title>
     <link rel="stylesheet" href="/static/style.css">
 </head>
-<body>
-    <h1>Analysis Result</h1>
-    <p><strong>Status:</strong> {{ status }}</p>
-    <p><strong>Response:</strong> {{ response }}</p>
-    {% if metadata %}
-    <h2>Metadata Collected</h2>
-    <ul>
-        <li><strong>Timestamp:</strong> {{ metadata.timestamp }}</li>
-        <li><strong>Scam Type:</strong> {{ metadata.scam_type }}</li>
-        <li><strong>Phishing URLs:</strong> {{ metadata.phishing_urls }}</li>
 
-    </ul>
-    {% endif %}
-    <a href="/">Back</a>
+<body>
+    <div class="container">
+        <h1>Honeypot Result</h1>
+        <div class="result-box">
+            <h2>Status: {{ status }}</h2>
+            <p><strong>Agent Reply:</strong> {{ reply }}</p>
+            <h3>Extracted Intelligence</h3>
+            <ul>
+                <li><strong>Bank Accounts:</strong> {{ intelligence.bankAccounts }}</li>
+                <li><strong>UPI IDs:</strong> {{ intelligence.upiIds }}</li>
+                <li><strong>Phishing Links:</strong> {{ intelligence.phishingLinks }}</li>
+                <li><strong>Phone Numbers:</strong> {{ intelligence.phoneNumbers }}</li>
+                <li><strong>Suspicious Keywords:</strong> {{ intelligence.suspiciousKeywords }}</li>
+            </ul>
+            <h3>Metadata</h3>
+            <pre>{{ metadata }}</pre>
+        </div>
+    </div>
 </body>
 </html>

@@ -1,6 +1,14 @@
+import pytest
 from honeypot.detector import ScamDetector
 
-def test_detection():
+def test_detect_scam_keyword():
     detector = ScamDetector()
-    result, _ = detector.analyze("verify your account now")
-    assert result
+    is_scam, scam_type = detector.analyze("Your account will be blocked, verify now")
+    assert is_scam is True
+    assert scam_type == "verify"
+
+def test_safe_message():
+    detector = ScamDetector()
+    is_scam, scam_type = detector.analyze("Hello friend, how are you?")
+    assert is_scam is False
+    assert scam_type is None

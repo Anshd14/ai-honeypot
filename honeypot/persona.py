@@ -1,14 +1,11 @@
 import random
-
 class DecoyPersona:
-    def __init__(self, name="Alex"):
-        self.name = name
-        self.responses = [
-            "Oh, that sounds interesting. Can you explain more?",
-            "Hmm, I’m not sure I understand. Could you repeat?",
-            "Wow, really? How does that work?",
-            "I’ll need some time to think about that."
-        ]
-
-    def respond(self, scam_message: str):
+    responses = [
+        "Why is my account being suspended?",
+        "Can you explain more clearly?",
+        "I don’t understand, what do you mean?",
+        "How do I verify safely?",
+        "What happens if I don’t share?"
+    ]
+    def respond(self, message: str):
         return random.choice(self.responses)

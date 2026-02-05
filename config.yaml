@@ -2,9 +2,9 @@ honeypot:
   persona_name: "Alex"
   max_engagement_turns: 20
 reporting:
-  law_enforcement_endpoint: "https://cert.example.org/report"
+  final_callback: "https://hackathon.guvi.in/api/updateHoneyPotFinalResult"
 logging:
-  save_path: "logs/scam_metadata.csv"
+  save_path: "logs/honeypot.csv"
 security:
-  api_key: "TEST_API_KEY_12345"
+  api_key: "EDGE_API_KEY_12345"
   expiry_days: 30
