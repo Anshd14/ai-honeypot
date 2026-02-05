@@ -23,7 +23,7 @@ logger = MetadataLogger()
 reporter = Reporter()
 # --- API Endpoint ---
 @app.post("/handoff")
-async def handoff(request: Request, authorization: str = Header(None)):
+async def handoff(request: Request,authorization: str=Header(None)):
     # Check API key
     if not authorization or not auth.is_valid(authorization.replace("Bearer ", "")):
         raise HTTPException(status_code=401, detail="Invalid or expired API key")

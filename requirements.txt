@@ -1,9 +1,9 @@
 fastapi
 uvicorn
 jinja2
-transformers
+python-multipart
 scikit-learn
 pandas
 requests
-psycopg2-binary
+PyYAML
 

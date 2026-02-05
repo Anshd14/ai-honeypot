@@ -1,0 +1,6 @@
+services:
+  honeypot:
+    build: .
+    container_name: ai-honeypot
+    ports:
+      - "8000:8000"

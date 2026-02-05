@@ -1,0 +1,3 @@
+timestamp,scam_message,honeypot_response,scam_type,phishing_urls
+2026-02-05T06:49:21.016548,"Hello, this is a test message","Oh, that sounds interesting. Can you explain more?",phishing,[]
+2026-02-05T06:49:21.354837,"Hello, this is a test message","Wow, really? How does that work?",phishing,[]

@@ -13,10 +13,11 @@ class MetadataLogger:
             "scam_message": scam_message,
             "honeypot_response": response,
             "scam_type": scam_type,
-            "phishing_urls": [
-                word for word in scam_message.split()
-                if word.startswith("http")
-            ]
+            "phishing_urls": ",".join([
+               word for word in scam_message.split()
+              if word.startswith("http")
+           ])
+           
         }
 
         df = pd.DataFrame([metadata])

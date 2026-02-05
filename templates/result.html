@@ -1,17 +1,22 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Result</title>
-<link rel="stylesheet" href="/static/style.css">
+    <title>AI Honeypot Result</title>
+    <link rel="stylesheet" href="/static/style.css">
 </head>
 <body>
+    <h1>Analysis Result</h1>
+    <p><strong>Status:</strong> {{ status }}</p>
+    <p><strong>Response:</strong> {{ response }}</p>
+    {% if metadata %}
+    <h2>Metadata Collected</h2>
+    <ul>
+        <li><strong>Timestamp:</strong> {{ metadata.timestamp }}</li>
+        <li><strong>Scam Type:</strong> {{ metadata.scam_type }}</li>
+        <li><strong>Phishing URLs:</strong> {{ metadata.phishing_urls }}</li>
 
-<h1>Analysis Result</h1>
-
-<p>Status: {{ status }}</p>
-<p>Response: {{ response }}</p>
-
-<a href="/">Back</a>
-
+    </ul>
+    {% endif %}
+    <a href="/">Back</a>
 </body>
 </html>
